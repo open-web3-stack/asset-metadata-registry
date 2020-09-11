@@ -1,0 +1,37 @@
+{
+  "currencyId": "DOT",
+  "url": "wss://testnet-node-1.acala.laminar.one/ws",
+  "description": {
+    "name": "",
+    "symbol": "DOT",
+    "decimals": 18,
+    "description": "",
+    "icon": ""
+  },
+  "operations": {
+    "storage": {
+      "freeBalance": {
+        "args": [
+          { "name": "accountId" },
+          { "name": "currentId", "default": "DOT" }
+        ],
+        "argSequence": [0],
+        "section": "tokens",
+        "method": "accounts",
+        "path": ["free"]
+      }
+    },
+    "calls": {
+      "transfer": {
+        "args": [
+          { "name": "dest" },
+          { "name": "currentId", "default": "DOT" },
+          { "name": "amount" }
+        ],
+        "argSequence": [0, 2],
+        "section": "currencies",
+        "method": "transfer"
+      }
+    }
+  }
+}

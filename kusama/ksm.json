@@ -1,0 +1,30 @@
+{
+  "currencyId": "KSM",
+  "url": "wss://kusama-rpc.polkadot.io/",
+  "description": {
+    "name": "",
+    "symbol": "KSM",
+    "decimals": 18,
+    "description": "",
+    "icon": ""
+  },
+  "operations": {
+    "storage": {
+      "freeBalance": {
+        "args": [{ "name": "accountId" }],
+        "argSequence": [0],
+        "section": "system",
+        "method": "account",
+        "path": ["data", "free"]
+      }
+    },
+    "calls": {
+      "transfer": {
+        "args": [{ "name": "dest" }, { "name": "amount" }],
+        "argSequence": [0, 1],
+        "section": "balances",
+        "method": "transfer"
+      }
+    }
+  }
+}

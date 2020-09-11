@@ -1,0 +1,17 @@
+{
+  "name": "@open-web3/asset-metadata-registry",
+  "version": "0.1.0",
+  "description": "asset metadata registry",
+  "main": "index.js",
+  "author": "Laminar Developers <hello@laminar.one>",
+  "license": "Apache-2.0",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "repository": "https://github.com/open-web3-stack/asset-metadata-registry.git",
+  "bugs": {
+    "url": "https://github.com/open-web3-stack/asset-metadata-registry/issues"
+  },
+  "homepage": "https://github.com/open-web3-stack/asset-metadata-registry"
+}
