@@ -1,0 +1,157 @@
+{
+  "PalletBalanceOf": "Balance",
+  "CollateralAuctionItem": {
+    "refundRecipient": "AccountId",
+    "currencyId": "CurrencyId",
+    "amount": "Compact<Balance>",
+    "target": "Compact<Balance>",
+    "startTime": "BlockNumber"
+  },
+  "DebitAuctionItem": {
+    "amount": "Compact<Balance>",
+    "fix": "Compact<Balance>",
+    "startTime": "BlockNumber"
+  },
+  "SurplusAuctionItem": {
+    "amount": "Compact<Balance>",
+    "startTime": "BlockNumber"
+  },
+  "LiquidationStrategy": {
+    "_enum": [
+      "Auction",
+      "Exchange"
+    ]
+  },
+  "OptionRate": "Option<Rate>",
+  "OptionRatio": "Option<Ratio>",
+  "ChangeOptionRate": {
+    "_enum": {
+      "NoChange": "Null",
+      "NewValue": "OptionRate"
+    }
+  },
+  "ChangeOptionRatio": {
+    "_enum": {
+      "NoChange": "Null",
+      "NewValue": "OptionRatio"
+    }
+  },
+  "ChangeBalance": {
+    "_enum": {
+      "NoChange": "Null",
+      "NewValue": "Balance"
+    }
+  },
+  "RiskManagementParams": {
+    "maximumTotalDebitValue": "Balance",
+    "stabilityFee": "Option<Rate>",
+    "liquidationRatio": "Option<Rate>",
+    "liquidationPenalty": "Option<Rate>",
+    "requiredCollateralRatio": "Option<Rate>"
+  },
+  "BalanceWrapper": {
+    "amount": "Balance"
+  },
+  "BalanceRequest": {
+    "amount": "Balance"
+  },
+  "RedeemStrategy": {
+    "_enum": {
+      "Immediately": "Null",
+      "Target": "EraIndex",
+      "WaitForUnbonding": "Null"
+    }
+  },
+  "HomaUnlockChunk": {
+    "value": "Compact<Balance>",
+    "era": "Compact<EraIndex>"
+  },
+  "BondingLedger": {
+    "total": "Compact<Balance>",
+    "active": "Compact<Balance>",
+    "unlocking": "Vec<UnlockChunk>"
+  },
+  "CurrencyId": {
+    "_enum": [
+      "ACA",
+      "AUSD",
+      "DOT",
+      "XBTC",
+      "LDOT",
+      "RENBTC"
+    ]
+  },
+  "AirDropCurrencyId": {
+    "_enum": [
+      "KAR",
+      "ACA"
+    ]
+  },
+  "BalanceInfo": {
+    "amount": "Balance"
+  },
+  "StakingBalance": "Balance",
+  "LiquidBalance": "Balance",
+  "StakingBalanceOf": "StakingBalance",
+  "LiquidBalanceOf": "LiquidBalance",
+  "PolkadotAccountId": "AccountId",
+  "PolkadotAccountIdOf": "PolkadotAccountId",
+  "ExchangeRate": "FixedU128",
+  "Rate": "FixedU128",
+  "Ratio": "FixedU128",
+  "AuctionId": "u32",
+  "AuctionIdOf": "AuctionId",
+  "CurrencyIdOf": "CurrencyId",
+  "Amount": "i128",
+  "AmountOf": "Amount",
+  "DebitAmount": "Amount",
+  "DebitAmountOf": "DebitAmount",
+  "DebitBalance": "Balance",
+  "DebitBalanceOf": "Balance",
+  "OracleKey": "CurrencyId",
+  "OracleValue": "Price",
+  "Share": "u128",
+  "FixedU128": "u128",
+  "CallOf": "Call",
+  "StorageValue": "Vec<u8>",
+  "GraduallyUpdate": {
+    "key": "StorageKey",
+    "targetValue": "StorageValue",
+    "perBlock": "StorageValue"
+  },
+  "TimestampedValue": {
+    "value": "OracleValue",
+    "timestamp": "Moment"
+  },
+  "TimestampedValueOf": "TimestampedValue",
+  "OrderedSet": "Vec<AccountId>",
+  "OrmlAccountData": {
+    "free": "Balance",
+    "frozen": "Balance",
+    "reserved": "Balance"
+  },
+  "OrmlBalanceLock": {
+    "amount": "Balance",
+    "id": "LockIdentifier"
+  },
+  "AuctionInfo": {
+    "bid": "Option<(AccountId, Balance)>",
+    "start": "BlockNumber",
+    "end": "Option<BlockNumber>"
+  },
+  "DelayedDispatchTime": {
+    "_enum": {
+      "At": "BlockNumber",
+      "After": "BlockNumber"
+    }
+  },
+  "DispatchId": "u32",
+  "Price": "FixedU128",
+  "VestingSchedule": {
+    "start": "BlockNumber",
+    "period": "BlockNumber",
+    "periodCount": "u32",
+    "perPeriod": "Compact<Balance>"
+  },
+  "VestingScheduleOf": "VestingSchedule"
+}
